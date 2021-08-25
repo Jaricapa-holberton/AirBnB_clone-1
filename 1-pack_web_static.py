@@ -4,13 +4,13 @@
 from fabric.api import *
 from datetime import datetime
 # get the actual time at the exceution moment
-now = datetime.now()
 
 
 # create a compressed file with the do_pack function
 def do_pack():
     """Generate a .tgz archive from the contents of the web_static."""
 
+    now = datetime.now()
     # format the name of the file with the timestamps
     now_year = now.year
     now_month = now.month
