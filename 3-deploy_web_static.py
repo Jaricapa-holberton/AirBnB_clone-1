@@ -8,6 +8,7 @@ from datetime import datetime
 env.hosts = ['35.243.138.187', '3.84.128.192']
 env.user = 'ubuntu'
 
+
 # create a compressed file with the do_pack function
 def do_pack():
     """Generate a .tgz archive from the contents of the web_static."""
@@ -33,6 +34,7 @@ def do_pack():
         return file_name
     else:
         return None
+
 
 def do_deploy(archive_path):
     """Distribute an archive to your web servers"""
@@ -91,6 +93,7 @@ def do_deploy(archive_path):
         return False
     # if every step was correct, return true
     return True
+
 
 def deploy():
     """Run pack and deploy the web_statics"""
