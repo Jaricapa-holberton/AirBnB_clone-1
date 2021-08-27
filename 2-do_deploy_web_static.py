@@ -2,7 +2,7 @@
 """Define the task do_deploy to fabric (fab) command"""
 
 from fabric.api import *
-from os import path, exists
+from os import path
 
 env.hosts = ['35.243.138.187', '3.84.128.192']
 env.user = 'ubuntu'
