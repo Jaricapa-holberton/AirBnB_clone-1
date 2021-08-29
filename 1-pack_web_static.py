@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """Define the task to_pack to fabric (fab) command"""
 
 from fabric.api import *

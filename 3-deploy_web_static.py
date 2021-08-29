@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """Define the tasks to_pack deploy web_static"""
 
 from fabric.api import *

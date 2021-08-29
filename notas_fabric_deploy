@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+
+versions/web_static_2021829151019.tgz ./web_static/
+
+fab -f 2-do_deploy_web_static.py do_deploy:archive_path=versions/web_static_2021829151019.tgz -i holberton -u ubuntu
