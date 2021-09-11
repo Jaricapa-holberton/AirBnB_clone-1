@@ -25,6 +25,7 @@ def hbnb():
 @app.route('/c/<text>', strict_slashes=False)
 def ctext(text):
     """Display “C ” followed by <text> variable"""
+    # save the string from the url and replace "_" for " "
     C_string = "C {}".format(text.replace("_", " "))
     return C_string
 
