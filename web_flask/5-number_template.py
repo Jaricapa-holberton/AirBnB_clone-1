@@ -3,7 +3,7 @@
 First Flask web application, this app is
 listening on 0.0.0.0, port 5000
 """
-from flask import Flask
+from flask import Flask, render_template
 # instance the class flask
 app = Flask(__name__)
 

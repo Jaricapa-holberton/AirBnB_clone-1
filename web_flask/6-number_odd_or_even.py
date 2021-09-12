@@ -3,7 +3,7 @@
 First Flask web application, this app is
 listening on 0.0.0.0, port 5000
 """
-from flask import Flask
+from flask import Flask, render_template
 # instance the class flask
 app = Flask(__name__)
 
@@ -38,24 +38,31 @@ def pythonText(text="is_cool"):
     return "Python {}".format(text.replace("_", " "))
 
 # route for '/number/<int:n>'
-@app.route("/number/<int:n>", strict_slashes=False)
-def number(n):
-    """Display “n is a number” only if n is an integer"""
-    return "{} is a number".format(n)
+@app.route('/number/<int:n>')
+def number_page(n):
+    """ Redirection for /number/ page and return a number
+        only if is integer.
+    """
+    return ('{} is a number'.format(n))
 
 # route for '/number_template/<int:n>'
-@app.route("/number_template/<int:n>", strict_slashes=False)
-def numberTemplate(n):
-    """Display “n is a number” only if n is an integer"""
-    return render_template("5-number.html", n=n)
+@app.route('/number_template/<int:n>')
+def number_template(n):
+    """ Redirection for /number_template page and return HTML with a number
+        only if is integer.
+    """
+    return render_template('5-number.html', number=n)
 
 # route for '/number_odd_or_even/<int:n>'
-@app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
-def number_odd_or_even(n):
-    """Display a HTML page only if n is an integer.
-    H1 tag: “Number: n is even|odd” inside the tag BODY
+@app.route('/number_odd_or_even/<int:n>')
+def number_odd_even(n):
+    """ Redirection for /number_odd_even page and return HTML with a number
+        only if is integer.
     """
-    return render_template("6-number_odd_or_even.html", n=n)
+    text = " is odd"
+    if n % 2 == 0:
+        text = " is even"
+    return render_template('6-number_odd_or_even.html', string=str(n)+text)
 
 
 # app_run modify where execute the app
