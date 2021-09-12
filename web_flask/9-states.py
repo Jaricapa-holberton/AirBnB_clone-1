@@ -15,7 +15,7 @@ def teardown(exc):
     storage.close()
 
 # URL for query list from states
-@app.route("/states_list", strict_slashes=False)
+@app.route("/states", strict_slashes=False)
 def states_list():
     """Display an HTML page
     - H1: “States”
