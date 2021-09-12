@@ -44,10 +44,12 @@ def number(n):
     return "{} is a number".format(n)
 
 # route for '/number_template/<int:n>'
-@app.route("/number_template/<int:n>", strict_slashes=False)
-def numberTemplate(n):
-    """Display “n is a number” only if n is an integer"""
-    return render_template("5-number.html", n=n)
+@app.route('/number_template/<int:n>')
+def number_template(n):
+    """ Redirection for /number_template page and return HTML with a number
+        only if is integer.
+    """
+    return render_template('5-number.html', number=n)
 
 
 # app_run modify where execute the app
