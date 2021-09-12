@@ -69,6 +69,7 @@ class FileStorage:
         except FileNotFoundError:
             pass
 
+    # 0x04. AirBnB clone - Web framework
     def close(self):
         """ Method that deserializing the JSON file to objects. """
         self.reload()

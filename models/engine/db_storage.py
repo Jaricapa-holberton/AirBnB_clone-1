@@ -83,6 +83,7 @@ class DBStorage():
         # __session is an instance of Session
         self.__session = Session()
 
+    # 0x04. AirBnB clone - Web framework
     def close(self):
         """ Method that close a session. """
         self.__session.close()

@@ -18,6 +18,7 @@ class State(BaseModel, Base):
     if (origin_data == "db"):
         cities = relationship("City", backref="state", cascade="all, delete")
     # if come from file_storage
+    # 0x04. AirBnB clone - Web framework
     else:
         @property
         def cities(self):
