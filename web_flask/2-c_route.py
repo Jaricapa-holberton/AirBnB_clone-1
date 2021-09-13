@@ -15,11 +15,13 @@ def hello():
     """Display “Hello HBNB!”"""
     return 'Hello HBNB!'
 
+
 # route for '/hbnb'
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """Display “HBNB”"""
     return 'HBNB'
+
 
 # route for '/c/<text>'
 @app.route('/c/<text>', strict_slashes=False)

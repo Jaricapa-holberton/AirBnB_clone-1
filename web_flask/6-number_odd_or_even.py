@@ -15,11 +15,13 @@ def hello():
     """Display “Hello HBNB!”"""
     return 'Hello HBNB!'
 
+
 # route for '/hbnb'
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """Display “HBNB”"""
     return 'HBNB'
+
 
 # route for '/c/<text>'
 @app.route('/c/<text>', strict_slashes=False)
@@ -29,6 +31,7 @@ def ctext(text):
     C_string = "C {}".format(text.replace("_", " "))
     return C_string
 
+
 # route for '/python'
 @app.route("/python", strict_slashes=False)
 # route for '/python/(<text>)', for default use "is cool"
@@ -36,6 +39,7 @@ def ctext(text):
 def pythonText(text="is_cool"):
     """Display “Python ” followed by <text> variable"""
     return "Python {}".format(text.replace("_", " "))
+
 
 # route for '/number/<int:n>'
 @app.route('/number/<int:n>')
@@ -45,6 +49,7 @@ def number_page(n):
     """
     return ('{} is a number'.format(n))
 
+
 # route for '/number_template/<int:n>'
 @app.route('/number_template/<int:n>')
 def number_template(n):
@@ -52,6 +57,7 @@ def number_template(n):
         only if is integer.
     """
     return render_template('5-number.html', number=n)
+
 
 # route for '/number_odd_or_even/<int:n>'
 @app.route('/number_odd_or_even/<int:n>')

@@ -7,6 +7,7 @@ from flask import Flask
 # instance the class flask
 app = Flask(__name__)
 
+
 # assing to Flask what URL trigger our function
 @app.route('/', strict_slashes=False)
 # create app for run

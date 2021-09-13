@@ -8,11 +8,13 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 # Close session
 @app.teardown_appcontext
 def teardown(exc):
     """Close SQLAlchemy session."""
     storage.close()
+
 
 # URL for query list from states
 @app.route("/states_list", strict_slashes=False)
