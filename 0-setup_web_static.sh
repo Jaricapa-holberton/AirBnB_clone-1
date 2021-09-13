@@ -26,7 +26,7 @@ f_config="/etc/nginx/sites-available/default"
 # Add header
 sudo sed -i "/listen 80 default_server/a add_header X-Served-By \"$HOSTNAME\";" $f_config
 # --> Add alias
-sed -i '/listen 80 default_server/a location /hbnb_static/ { alias /data/web_static/current/;}' $f_config
+sudo sed -i '/listen 80 default_server/a location /hbnb_static/ { alias /data/web_static/current/;}' $f_config
 # Create default page
 sudo rm /var/www/html/*
 sudo echo "Holberton School for the win!" | sudo tee /var/www/html/index.html

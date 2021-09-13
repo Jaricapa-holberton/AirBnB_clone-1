@@ -6,7 +6,7 @@ from fabric.api import *
 from datetime import datetime
 # get the actual time at the exceution moment
 
-env.hosts = ['35.243.138.187', '3.84.128.192']
+env.hosts = ['35.243.138.187', '34.228.83.67']
 env.user = 'ubuntu'
 
 
